@@ -1,13 +1,15 @@
+import CCP from './ccp';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload1.
+          Edit <code>src/App.js</code> and save to reload2.
         </p>
         <a
           className="App-link"
@@ -18,6 +20,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <CCP />
     </div>
   );
 }
