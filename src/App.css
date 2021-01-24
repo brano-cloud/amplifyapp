@@ -3,12 +3,13 @@
   flex-direction: row;
   font-size: 30px;
   text-align: center;
+  height: 800px;
 }
 
 .flex-item-left {
   background-color: #fcf7f7;
   padding: 10px;
-  flex: 20%;
+  flex: 30%;
 }
 
 .flex-item-right {
