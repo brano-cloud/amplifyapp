@@ -5,10 +5,12 @@ import './App.css';
 function App() {
 
   return (
-    <div className="flex-container">
-      <CCP className="flex-item-left" />
-      <div className="flex-item-right">
-      </div>
+    <div className="grid-container">
+      <div className="itemHeader">Header</div>
+      <CCP className="itemMenu" />
+      <div className="itemMain">Main</div>
+      <div className="itemRight">Right</div>
+      <div className="itemFooter">Footer</div>
     </div>
   );
 }

@@ -1,3 +1,28 @@
+.itemHeader { grid-area: header; }
+.item2Menu { grid-area: menu; }
+.itemMain { grid-area: main; }
+.itemRight { grid-area: right; }
+.itemFooter { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #ccdff1;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+
 .flex-container {
   display: flex;
   flex-direction: row;
