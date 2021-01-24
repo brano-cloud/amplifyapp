@@ -5,12 +5,10 @@ import './App.css';
 function App() {
 
   return (
-    <div className="grid-container">
-      <div className="itemHeader">Header</div>
-      <CCP className="itemMenu" />
-      <div className="itemMain">Main</div>
-      <div className="itemRight">Right</div>
-      <div className="itemFooter">Footer</div>
+    <div>
+      <div className="container">
+        <CCP className="responsive-iframe" />
+      </div>
     </div>
   );
 }
