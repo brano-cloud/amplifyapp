@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <div className="container">
-        <CCP className="responsive-iframe" />
+        <CCP className="myccp" />
       </div>
     </div>
   );
