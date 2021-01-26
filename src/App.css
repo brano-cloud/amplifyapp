@@ -1,12 +1,12 @@
 .container {
-  width: 340px;
-  height: 460px;
+  width: 500px;
+  height: 600px;
   outline: auto;
 }
 
 .containerDiv {
-  width: auto;
-  height: 460px;
+  width: 340px;
+  height: 480px;
   outline: auto;
   border: none;
   overflow-y: hidden;
