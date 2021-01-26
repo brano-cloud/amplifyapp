@@ -10,6 +10,7 @@ class CCP extends Component {
     }
 
     componentDidMount() {
+        console.log(this.props);
         // eslint-disable-next-line no-undef
         connect.core.initCCP(this.containerDiv.current, {
             ccpUrl: "https://brano.awsapps.com/connect/ccp-v2",
@@ -48,10 +49,6 @@ class CCP extends Component {
                 }
             });
         });
-    }
-
-    newMethod() {
-        return this;
     }
 
     render() {

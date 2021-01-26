@@ -6,9 +6,12 @@ import { Component } from "react";
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      test: 'blablabla'
+    }
   }
 
-  openURL = (url) => {
+  handleOpenUrl = (url) => {
     window.open(url);
   }
 
@@ -16,7 +19,11 @@ class App extends Component {
     return (
       <div>
         <div className="container">
-          <CCP className="myccp" openURL={(url) => this.openURL(url)} />
+          <CCP
+            className="myccp"
+            handleOpenUrl={this.handleOpenUrl}
+            testString={this.state.test}
+          />
         </div>
       </div>
     );
