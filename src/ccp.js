@@ -22,8 +22,8 @@ class CCP extends Component {
         });
         // eslint-disable-next-line no-undef
         connect.contact(function (contact) {
-            contact.onIncoming(function (contact) {
-                console.log(`onIncoming`);
+            contact.onConnecting(function (contact) {
+                console.log(`onConnecting `);
 
             });
             contact.onRefresh(function (contact) {
