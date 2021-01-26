@@ -44,7 +44,7 @@ class CCP extends Component {
                 console.log(JSON.stringify(attributeMap));
                 try {
                     //_this.props.openURL(attributeMap.testAttr.value);
-                    window.open("www.conn3ct.com");
+                    window.open("https://www.conn3ct.com");
                 } catch (error) {
                     console.log(error);
                 }
