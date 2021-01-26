@@ -10,7 +10,9 @@
   outline: auto;
 }
 
-.container > .containerDiv {
+.containerDiv {
   background: red;
   border: 4px dashed black;
+  height: 100%;
+  width: 100%;
 }
