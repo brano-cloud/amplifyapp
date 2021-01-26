@@ -1,18 +1,15 @@
 .container {
-  display: flex;
-  margin: 0;
-  width: 500px;
-  height: 600px;
-  padding: 0px;
-  resize: both;
-  border: 2px solid gray;
   overflow: hidden;
-  outline: auto;
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  position: relative;
 }
 
-.containerDiv {
-  background: red;
-  border: 4px dashed black;
-  height: 100%;
-  width: 100%;
+.container CCP {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
 }
