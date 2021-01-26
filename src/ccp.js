@@ -50,6 +50,10 @@ class CCP extends Component {
         });
     }
 
+    newMethod() {
+        return this;
+    }
+
     render() {
         return (
             <div className="ccp">

@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div>
         <div className="container">
-          <CCP className="myccp" openURL={this.openURL} />
+          <CCP className="myccp" openURL={(url) => this.openURL(url)} />
         </div>
       </div>
     );
