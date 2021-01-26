@@ -22,10 +22,13 @@ class CCP extends Component {
         });
         // eslint-disable-next-line no-undef
         connect.contact(function (contact) {
-            contact.onConnected(function () {
-                console.log(`onConnected(${contact.getContactId()})`);
+            contact.onIncoming(function (contact) {
+                console.log(`onConnecting(${contact.getContactId()})`);
                 let attributeMap = contact.getAttributes();
                 console.log(JSON.stringify(attributeMap));
+            });
+            contact.onConnected(function () {
+                console.log(`onConnected(${contact.getContactId()})`);
             });
         });
     }
