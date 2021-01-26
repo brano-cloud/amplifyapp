@@ -8,6 +8,9 @@
 .containerDiv iframe {
   display: none;
 }
+.ccp iframe {
+  display: none;
+}
 
 .responsive-iframe {
   min-width: 64;
