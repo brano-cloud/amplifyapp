@@ -7,6 +7,7 @@ class CCP extends Component {
     constructor(props) {
         super(props);
         this.containerDiv = React.createRef();
+        this.testaaa = React.createRef();
     }
 
     componentDidMount() {
@@ -61,7 +62,7 @@ class CCP extends Component {
             <div className="ccp">
                 {/* ccp */}
                 <div className="containerDiv" ref={this.containerDiv} />
-                <div ref={testaaa}></div>
+                <div ref={this.testaaa}></div>
             </div>
         );
     }
