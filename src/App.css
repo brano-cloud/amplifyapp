@@ -12,10 +12,15 @@
 
 .containerDiv {
   border: 0;
-  height: 99%;
+  height: 90%;
   left: 0;
   position: absolute;
   top: 0;
   width: 99%;
   overflow: hidden;
+}
+
+.pokus {
+  position: absolute;
+  bottom: 0;
 }
