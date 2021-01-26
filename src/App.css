@@ -8,4 +8,5 @@
   width: auto;
   height: 460px;
   outline: auto;
+  overflow: hidden;
 }
