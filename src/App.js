@@ -8,7 +8,7 @@ class App extends Component {
     super(props);
   }
 
-  openURL = async (url) => {
+  openURL = (url) => {
     window.open(url);
   }
 

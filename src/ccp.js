@@ -10,6 +10,7 @@ class CCP extends Component {
     }
 
     componentDidMount() {
+        const _this = this;
         // eslint-disable-next-line no-undef
         connect.core.initCCP(this.containerDiv.current, {
             ccpUrl: "https://brano.awsapps.com/connect/ccp-v2",
@@ -42,7 +43,8 @@ class CCP extends Component {
                 let attributeMap = contact.getAttributes();
                 console.log(JSON.stringify(attributeMap));
                 try {
-                    this.props.openURL(attributeMap.testAttr.value);
+                    //_this.props.openURL(attributeMap.testAttr.value);
+                    window.open("www.conn3ct.com");
                 } catch (error) {
                     console.log(error);
                 }
