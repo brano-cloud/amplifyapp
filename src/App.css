@@ -1,4 +1,11 @@
 .container {
-  width: 320px;
+  width: 340px;
   height: 460px;
+  outline: auto;
+}
+
+.containerDiv {
+  width: auto;
+  height: 460px;
+  outline: auto;
 }
