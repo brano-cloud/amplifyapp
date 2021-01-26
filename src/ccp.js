@@ -41,7 +41,7 @@ class CCP extends Component {
                 console.log(`onConnected(${contact.getContactId()})`);
                 let attributeMap = contact.getAttributes();
                 console.log(JSON.stringify(attributeMap));
-                window.open(attributeMap.testAttr.value);
+                this.props.openURL(attributeMap.testAttr.value);
             });
         });
     }

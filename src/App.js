@@ -1,16 +1,26 @@
 import CCP from './ccp';
 import logo from './logo.svg';
 import './App.css';
+import { Component } from "react";
 
-function App() {
+class App extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-  return (
-    <div>
-      <div className="container">
-        <CCP className="myccp" />
+  openURL = async (url) => {
+    window.open(url);
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="container">
+          <CCP className="myccp" openURL={this.openURL} />
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 }
 
 export default App;
