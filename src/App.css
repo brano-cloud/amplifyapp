@@ -11,6 +11,7 @@
   border: none;
   overflow-y: hidden;
   overflow-x: hidden;
+  resize: both;
 }
 
 ::-webkit-scrollbar {
