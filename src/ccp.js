@@ -10,7 +10,7 @@ class CCP extends Component {
     }
 
     componentDidMount() {
-
+        // eslint-disable-next-line no-undef
         connect.core.initCCP(this.containerDiv.current, {
             ccpUrl: "https://brano.awsapps.com/connect/ccp-v2",
             loginPopup: true,
