@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import React from 'react';
 import 'amazon-connect-streams';
+import './App.css';
 
 class CCP extends Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class CCP extends Component {
     }
 
     componentDidMount() {
-        // eslint-disable-next-line no-undef
+
         connect.core.initCCP(this.containerDiv.current, {
             ccpUrl: "https://brano.awsapps.com/connect/ccp-v2",
             loginPopup: true,
