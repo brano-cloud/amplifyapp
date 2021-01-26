@@ -20,6 +20,14 @@ class CCP extends Component {
                 allowFramedSoftphone: true
             }
         });
+        // eslint-disable-next-line no-undef
+        connect.contact(function (contact) {
+            contact.onConnected(function () {
+                console.log(`onConnected(${contact.getContactId()})`);
+                let attributeMap = contact.getAttributes();
+                console.log(JSON.stringify(attributeMap));
+            });
+        });
     }
 
     render() {
