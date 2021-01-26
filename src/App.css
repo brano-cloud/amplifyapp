@@ -13,13 +13,7 @@
 }
 
 .responsive-iframe {
-  min-width: 64;
-  line-height: 32px;
-  border-radius: 4;
-  border: none;
-  padding: 16px;
-  height: 500px;
-  color: #fff;
+  display: none;
 }
 
 .ccp {
