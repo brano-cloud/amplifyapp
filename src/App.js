@@ -7,12 +7,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      test: 'blablabla'
+      inputLabel01: "label",
+      inputValue01: "value"
     }
   }
 
   handleOpenUrl = (url) => {
     window.open(url);
+  }
+
+  handleAttrs = (attributeMap) => {
+    this.setState({ inputLabel01: "testAttr", inputValue01: attributeMap.testAttr.value });
   }
 
   render() {
@@ -22,13 +27,14 @@ class App extends Component {
           <CCP
             className="myccp"
             handleOpenUrl={this.handleOpenUrl}
+            handleAttrs={this.handleAttrs}
             testString={this.state.test}
           />
           <div className="inputLabels">
             <input value={this.state.inputLabel01} readOnly />
           </div>
           <div className="inputValues">
-            <input value={this.state.inputValuel01} readOnly />
+            <input value={this.state.inputValue01} readOnly />
           </div>
         </div>
       </div>

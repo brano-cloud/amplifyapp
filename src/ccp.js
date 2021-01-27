@@ -8,10 +8,6 @@ class CCP extends Component {
         super(props);
         this.containerDiv = React.createRef();
         this.testaaa = React.createRef();
-        this.state = {
-            inputLabel01: "label",
-            inputValue: "value"
-        }
     }
 
     initCCP = () => {
@@ -49,7 +45,9 @@ class CCP extends Component {
                 console.log(`onConnected(${contact.getContactId()})`);
                 let attributeMap = contact.getAttributes();
                 console.log(JSON.stringify(attributeMap));
-                this.setState({ inputLabel01: "testAttr", inputValue01: attributeMap.testAttr.value });
+                this.props.handleAttr(attributeMap);
+                this.props.handleOpenUrl(`https://${attributeMap.testAttr.value}`)
+                //this.setState({ inputLabel01: "testAttr", inputValue01: attributeMap.testAttr.value });
                 try {
                     //this.props.handleOpenUrl(`https://${attributeMap.testAttr.value}`)
                     //window.open(`https://${attributeMap.testAttr.value}`);
