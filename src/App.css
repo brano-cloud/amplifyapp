@@ -15,9 +15,14 @@
   outline: auto;
 }
 
+.btn00 {
+  position:absolute;
+  bottom: 0;
+}
+
 .containerDiv {
   border: 0;
-  height: 97%;
+  height: 90%;
   left: 0;
   position: absolute;
   top: 0;

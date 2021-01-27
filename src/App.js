@@ -28,9 +28,8 @@ class App extends Component {
         <div className="container">
           <CCP
             className="myccp"
-            handleOpenUrl={() => this.handleOpenUrl()}
-            handleAttrs={() => this.handleAttrs()}
-            testString={this.state.test}
+            handleOpenUrl={this.handleOpenUrl}
+            handleAttrs={this.handleAttrs}
           />
           <div className="inputLabels">
             <input value={this.state.inputLabel01} readOnly />

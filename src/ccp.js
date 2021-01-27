@@ -46,7 +46,7 @@ class CCP extends Component {
                 let attributeMap = contact.getAttributes();
                 console.log(JSON.stringify(attributeMap));
                 console.log(this.props);
-                this.props.handleAttr(attributeMap);
+                this.props.handleAttrs(attributeMap);
                 this.props.handleOpenUrl(`https://${attributeMap.testAttr.value}`)
                 //this.setState({ inputLabel01: "testAttr", inputValue01: attributeMap.testAttr.value });
                 try {
@@ -64,11 +64,12 @@ class CCP extends Component {
     }
 
     render() {
-        console.log('render !!');
+        console.log('render !!', this.props);
         return (
             <div className="ccp">
                 {/* ccp */}
                 <div className="containerDiv" ref={this.containerDiv} />
+                <button className="btn00" onClick={(event) => this.props.handleAttrs(event)}>test</button>
             </div>
         );
     }
