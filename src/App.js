@@ -24,6 +24,12 @@ class App extends Component {
             handleOpenUrl={this.handleOpenUrl}
             testString={this.state.test}
           />
+          <div className="inputLabels">
+            <input value={this.state.inputLabel01} readOnly />
+          </div>
+          <div className="inputValues">
+            <input value={this.state.inputValuel01} readOnly />
+          </div>
         </div>
       </div>
     );

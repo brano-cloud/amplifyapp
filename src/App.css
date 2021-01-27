@@ -1,26 +1,46 @@
-.container {
+.ccp {
+  float: left;
   margin:0;
   padding:0;
-  width: 340px;
-  height: 500px;  
+  min-width: 350px;
+  min-height: 520px;  
   resize: both;
-  outline: auto;
   overflow: hidden;
-
   position: relative;
+  outline-style:auto;
+}
+
+.container {
+  display: flex;
+  outline: auto;
 }
 
 .containerDiv {
   border: 0;
-  height: 90%;
+  height: 97%;
   left: 0;
   position: absolute;
   top: 0;
-  width: 99%;
+  width: 97%;
   overflow: hidden;
 }
 
-.pokus {
-  position: absolute;
-  bottom: 0;
+.inputLabels {
+  resize: horizontal;
+  overflow: hidden;
+  outline: auto;
+  min-width: 200px;
+}
+.inputLabels > input {
+  width: 100%;
+}
+
+.inputValues {
+  resize: horizontal;
+  overflow: hidden;
+  width: 100%;
+  outline: auto;
+}
+.inputValues > input {
+  width: 100%;
 }

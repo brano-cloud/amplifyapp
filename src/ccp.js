@@ -9,7 +9,8 @@ class CCP extends Component {
         this.containerDiv = React.createRef();
         this.testaaa = React.createRef();
         this.state = {
-            bbb: "aaa"
+            inputLabel01: "label",
+            inputValue: "value"
         }
     }
 
@@ -48,8 +49,7 @@ class CCP extends Component {
                 console.log(`onConnected(${contact.getContactId()})`);
                 let attributeMap = contact.getAttributes();
                 console.log(JSON.stringify(attributeMap));
-                console.log('xxx', this);
-                this.setState({ bbb: attributeMap.testAttr.value });
+                this.setState({ inputLabel01: "testAttr", inputValue01: attributeMap.testAttr.value });
                 try {
                     //this.props.handleOpenUrl(`https://${attributeMap.testAttr.value}`)
                     //window.open(`https://${attributeMap.testAttr.value}`);
@@ -70,9 +70,6 @@ class CCP extends Component {
             <div className="ccp">
                 {/* ccp */}
                 <div className="containerDiv" ref={this.containerDiv} />
-                <div className="pokus">
-                    <input ref={this.testaaa} value={this.state.bbb} readOnly />
-                </div>
             </div>
         );
     }
