@@ -13,7 +13,7 @@ class CCP extends Component {
         }
     }
 
-    initCCP = () => {
+    initCCP = (that) => {
         // eslint-disable-next-line no-undef
         connect.core.initCCP(this.containerDiv.current, {
             ccpUrl: "https://brano.awsapps.com/connect/ccp-v2",
@@ -24,25 +24,25 @@ class CCP extends Component {
                 allowFramedSoftphone: true
             }
         });
-        console.log(this.props);
+        console.log('that', that);
 
         // eslint-disable-next-line no-undef
-        connect.contact(function (contact) {
+        connect.contact((contact) => {
             console.log('hhh', this.props);
 
-            contact.onConnecting(function (contact) {
+            contact.onConnecting(() => {
                 console.log(`onConnecting `);
 
             });
-            contact.onRefresh(function (contact) {
+            contact.onRefresh(() => {
                 console.log(`onRefresh`);
             });
 
-            contact.onAccepted(function (contact) {
+            contact.onAccepted(() => {
                 console.log(`onAccepted`);
             });
 
-            contact.onEnded(function () {
+            contact.onEnded(() => {
                 console.log(`onEnded`);
             });
             contact.onConnected(() => {
@@ -62,8 +62,9 @@ class CCP extends Component {
     }
 
     componentDidMount() {
+        let that = this;
         console.log(this.props);
-        this.initCCP();
+        this.initCCP(that);
         console.log(this.props);
     }
 
