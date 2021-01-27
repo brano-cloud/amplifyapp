@@ -13,7 +13,7 @@ class CCP extends Component {
         }
     }
 
-    initCCP = (that) => {
+    initCCP = () => {
         // eslint-disable-next-line no-undef
         connect.core.initCCP(this.containerDiv.current, {
             ccpUrl: "https://brano.awsapps.com/connect/ccp-v2",
@@ -24,7 +24,6 @@ class CCP extends Component {
                 allowFramedSoftphone: true
             }
         });
-        console.log('that', that);
 
         // eslint-disable-next-line no-undef
         connect.contact((contact) => {
@@ -50,7 +49,7 @@ class CCP extends Component {
                 let attributeMap = contact.getAttributes();
                 console.log(JSON.stringify(attributeMap));
                 console.log('xxx', this);
-                this.setState({ bbb: 'ccc' });
+                this.setState({ bbb: attributeMap.testAttr.value });
                 try {
                     //this.props.handleOpenUrl(`https://${attributeMap.testAttr.value}`)
                     //window.open(`https://${attributeMap.testAttr.value}`);
@@ -62,10 +61,7 @@ class CCP extends Component {
     }
 
     componentDidMount() {
-        let that = this;
-        console.log(this.props);
-        this.initCCP(that);
-        console.log(this.props);
+        this.initCCP();
     }
 
     render() {
