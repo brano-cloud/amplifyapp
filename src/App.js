@@ -13,10 +13,12 @@ class App extends Component {
   }
 
   handleOpenUrl = (url) => {
+    console.log('ccc', url);
     window.open(url);
   }
 
   handleAttrs = (attributeMap) => {
+    console.log('bbb', attributeMap);
     this.setState({ inputLabel01: "testAttr", inputValue01: attributeMap.testAttr.value });
   }
 
@@ -26,8 +28,8 @@ class App extends Component {
         <div className="container">
           <CCP
             className="myccp"
-            handleOpenUrl={() => this.handleOpenUrl}
-            handleAttrs={() => this.handleAttrs}
+            handleOpenUrl={() => this.handleOpenUrl()}
+            handleAttrs={() => this.handleAttrs()}
             testString={this.state.test}
           />
           <div className="inputLabels">
