@@ -8,13 +8,16 @@ class CCP extends Component {
         super(props);
         this.containerDiv = React.createRef();
         this.testaaa = React.createRef();
+        this.state = {
+            bbb: "aaa"
+        }
     }
 
     componentDidMount() {
         console.log(this.props);
         //this.props.handleOpenUrl('https://www.conn3ct.com')
         // eslint-disable-next-line no-undef
-        let cntaws = connect.core.initCCP(this.containerDiv.current, {
+        connect.core.initCCP(this.containerDiv.current, {
             ccpUrl: "https://brano.awsapps.com/connect/ccp-v2",
             loginPopup: true,
             loginPopupAutoClose: true,
@@ -23,7 +26,6 @@ class CCP extends Component {
                 allowFramedSoftphone: true
             }
         });
-        console.log('cntaws', cntaws);
         // eslint-disable-next-line no-undef
         connect.contact(function (contact) {
             contact.onConnecting(function (contact) {
@@ -46,7 +48,7 @@ class CCP extends Component {
                 let attributeMap = contact.getAttributes();
                 console.log(JSON.stringify(attributeMap));
                 console.log('xxx', this);
-                this.testaaa.current.value = "gggggg"
+                this.setState({ bbb: 'ccc' });
                 try {
                     //this.props.handleOpenUrl(`https://${attributeMap.testAttr.value}`)
                     //window.open(`https://${attributeMap.testAttr.value}`);
@@ -64,7 +66,7 @@ class CCP extends Component {
                 {/* ccp */}
                 <div className="containerDiv" ref={this.containerDiv} />
                 <div className="pokus">
-                    <input ref={this.testaaa} value="test" readOnly />
+                    <input ref={this.testaaa} value={this.state.bbb} readOnly />
                 </div>
             </div>
         );
