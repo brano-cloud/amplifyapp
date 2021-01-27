@@ -14,7 +14,7 @@ class CCP extends Component {
         console.log(this.props);
         //this.props.handleOpenUrl('https://www.conn3ct.com')
         // eslint-disable-next-line no-undef
-        connect.core.initCCP(this.containerDiv.current, {
+        let cntaws = connect.core.initCCP(this.containerDiv.current, {
             ccpUrl: "https://brano.awsapps.com/connect/ccp-v2",
             loginPopup: true,
             loginPopupAutoClose: true,
@@ -23,6 +23,7 @@ class CCP extends Component {
                 allowFramedSoftphone: true
             }
         });
+        console.log('cntaws', cntaws);
         // eslint-disable-next-line no-undef
         connect.contact(function (contact) {
             contact.onConnecting(function (contact) {
