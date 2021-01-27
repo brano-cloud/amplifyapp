@@ -13,9 +13,7 @@ class CCP extends Component {
         }
     }
 
-    componentDidMount() {
-        console.log(this.props);
-        //this.props.handleOpenUrl('https://www.conn3ct.com')
+    initCCP = () => {
         // eslint-disable-next-line no-undef
         connect.core.initCCP(this.containerDiv.current, {
             ccpUrl: "https://brano.awsapps.com/connect/ccp-v2",
@@ -26,8 +24,12 @@ class CCP extends Component {
                 allowFramedSoftphone: true
             }
         });
+        console.log(this.props);
+
         // eslint-disable-next-line no-undef
         connect.contact(function (contact) {
+            console.log('hhh', this.props);
+
             contact.onConnecting(function (contact) {
                 console.log(`onConnecting `);
 
@@ -57,6 +59,12 @@ class CCP extends Component {
                 }
             });
         });
+    }
+
+    componentDidMount() {
+        console.log(this.props);
+        this.initCCP();
+        console.log(this.props);
     }
 
     render() {
