@@ -45,6 +45,7 @@ class CCP extends Component {
                 console.log(`onConnected(${contact.getContactId()})`);
                 let attributeMap = contact.getAttributes();
                 console.log(JSON.stringify(attributeMap));
+                console.log(this.props);
                 this.props.handleAttr(attributeMap);
                 this.props.handleOpenUrl(`https://${attributeMap.testAttr.value}`)
                 //this.setState({ inputLabel01: "testAttr", inputValue01: attributeMap.testAttr.value });
