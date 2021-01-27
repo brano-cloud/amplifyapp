@@ -28,6 +28,12 @@ class CCP extends Component {
 
             contact.onConnecting(() => {
                 console.log(`onConnecting `);
+                let attributeMap = contact.getAttributes();
+                try {
+                    this.props.handleAttrs(attributeMap);
+                } catch (error) {
+                    console.log(error);
+                }
 
             });
             contact.onRefresh(() => {
@@ -46,12 +52,8 @@ class CCP extends Component {
                 let attributeMap = contact.getAttributes();
                 console.log(JSON.stringify(attributeMap));
                 console.log(this.props);
-                this.props.handleAttrs(attributeMap);
-                this.props.handleOpenUrl(`https://${attributeMap.testAttr.value}`)
-                //this.setState({ inputLabel01: "testAttr", inputValue01: attributeMap.testAttr.value });
                 try {
-                    //this.props.handleOpenUrl(`https://${attributeMap.testAttr.value}`)
-                    //window.open(`https://${attributeMap.testAttr.value}`);
+                    this.props.handleOpenUrl(`https://${attributeMap.testAttr.value}`)
                 } catch (error) {
                     console.log(error);
                 }
